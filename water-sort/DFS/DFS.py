@@ -1,15 +1,13 @@
-from Kakurasu import *
 from Util import *
 from Node import *
 
 class DepthFirstSearch:
-    
-    def solve(self, kakurasu):
+
+    def solve(self, watersort):
         
         stack = Stack()
         solution = None
-
-        start = Node(kakurasu.state, kakurasu.row_const, kakurasu.col_const, [])
+        start = Node(watersort.state, watersort.n_tube, watersort.n_tube_empty, watersort.tube_size, [])
         visited = []
 
         stack.push(start)
@@ -17,19 +15,16 @@ class DepthFirstSearch:
         while stack.empty() == False:
             
             top = stack.pop()
-            state = top.state
-            path = top.path
-            
+            watersort.steps += [top]
+            visited += [top.generate_steps()]
             count += 1
-            visited += [str(state)]
             if top.is_goal_state():
                 solution = top
                 break
 
             nodes = top.expand_node()
-
+            
             for node in nodes:
-                if visited.count(str(node.state)) == 0:
+                if visited.count(node.generate_steps()) == 0:
                     stack.push(node)
-                    
         return solution

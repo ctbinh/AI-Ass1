@@ -1,7 +1,7 @@
 from Util import *
 import os
 import pathlib
-from Kakurasu import *
+from WaterSort import *
 import time
 
 DIR_PATH = str(pathlib.Path(__file__).parent.resolve())
@@ -9,6 +9,8 @@ DIR_PATH = str(pathlib.Path(__file__).parent.resolve())
 def readFile(fileName):
     scanner = open(fileName, "r")
     lines = scanner.read().splitlines()
+    for i in range(len(lines)):
+        lines[i] = lines[i].split(' ')
     return lines
 
 class CreateOutput:
@@ -29,22 +31,26 @@ class CreateOutput:
 if __name__ == '__main__':
     fileName = "input.txt"
     input = readFile(os.path.join(DIR_PATH, 'input' ,fileName))
-    size = int(input[0][0])
-    row = []
-    col = []
-    for i in range(size):
-        row.insert(i, int(input[i + 1]))
-    for i in range(size):
-        col.insert(i + size, int(input[i + size + 1]))
-    kaku = Kakurasu(row, col, size)
+    n_tube = int(input[0][0])
+    n_tube_empty = int(input[0][1])
+    tube_size = int(input[0][2])
+    tube_full = []
+    for i in range(n_tube):
+        tube = Stack()
+        for j in range(tube_size):
+            tube.push(int(input[i + 1][j]))
+        tube_full += [tube]
+
+    watersort = WaterSort(n_tube, n_tube_empty, tube_size, tube_full)
     
     start= time.time()
-    kaku.solveByDFS()
+    watersort.solveByDFS()
     end = time.time()
     
-    steps = kaku.generate_steps()
-    print("KAKURASU solve by DFS:")
+    steps = watersort.generate_steps()
+    print("WATERSORT solve by DFS:")
     print("Time: ",end - start)
+    print("Steps:",len(steps))
     print("Solution:")
     print(steps[len(steps) - 1])
     

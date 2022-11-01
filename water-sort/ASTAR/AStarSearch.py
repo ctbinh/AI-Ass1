@@ -49,6 +49,7 @@ class AStarSearch(SearchAlgorithm):
             self.col_const = [number for number in col_const]
             self.g_value = self.cal_g_value()
             self.h_value = self.cal_h_value()
+            print(self.g_value, self.h_value)
             self.total_cost = self.get_total_cost()
 
         
@@ -58,7 +59,7 @@ class AStarSearch(SearchAlgorithm):
         def cal_g_value(self):
             countTotal = 0
             count = 0
-
+            print(self.state)
             for row in self.state:
                 count += 1
                 count2 = 0

@@ -4,10 +4,21 @@ def create_matrix(value, size):
         res += [[value] * size]
     return res
 
+def create_list_stack(n_tube, n_tube_empty, tube_full):
+    res = []
+    res += tube_full
+    for i in range(n_tube_empty):
+        res += [Stack()]
+    return res
+
+
 def deep_copy(l):
     new_list = []
-    for row in l:
-        new_list += [[number for number in row]]
+    for tube in l:
+        new_tube = Stack()
+        for i in range(tube.length):
+            new_tube.push(tube.items[i])
+        new_list += [new_tube]
     return new_list
 
 
@@ -56,6 +67,12 @@ class Stack(CustomList):
         self.items = self.items[ :-1]
         self.length -= 1
         return top
+    
+    def __str__(self) -> str:
+        stack = 'Tube| '
+        for i in range(len(self.items)):
+            stack += str(self.items[i]) + ' '
+        return stack
     
 
 
