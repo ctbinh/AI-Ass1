@@ -3,6 +3,7 @@ import os
 import pathlib
 from WaterSort import *
 import time
+import psutil
 
 DIR_PATH = str(pathlib.Path(__file__).parent.resolve())
 
@@ -30,6 +31,7 @@ class CreateOutput:
     
 if __name__ == '__main__':
     fileName = "input.txt"
+    process = psutil.Process(os.getpid())
     input = readFile(os.path.join(DIR_PATH, 'input' ,fileName))
     n_tube = int(input[0][0])
     n_tube_empty = int(input[0][1])
@@ -46,7 +48,7 @@ if __name__ == '__main__':
     start= time.time()
     watersort.solveByDFS()
     end = time.time()
-    
+    print(process.memory_info().rss)
     steps = watersort.generate_steps()
     print("WATERSORT solve by DFS:")
     print("Time: ",end - start)

@@ -1,55 +1,60 @@
-import time
-import functools
+from Util import *
+import os
 import pathlib
-from AStarSearch import *
-from kakurasu import *
+from WaterSort import *
+import time
+import psutil
 
-DIR_PATH = str(pathlib.Path(__file__).parent.resolve()) + '\\'
+DIR_PATH = str(pathlib.Path(__file__).parent.resolve())
 
 def readFile(fileName):
     scanner = open(fileName, "r")
     lines = scanner.read().splitlines()
+    for i in range(len(lines)):
+        lines[i] = lines[i].split(' ')
     return lines
 
+class CreateOutput:
 
-def initBoard(size):
-    board = []
-    for i in range(size):
-        row = []
-        for j in range(size):
-            row.insert(j, 0)
-        board.insert(i, row)
-    return board
+    @staticmethod
+    def truncate_file(fileName):
+        file = open(fileName,"r+")
+        file.truncate(0)
+        file.close()
 
-def printBoard(board):
-    for i in board:
-        line = "["
-        for j in range(len(i)):
-            if j == 0:
-                line += str(i[j])
-            else:
-                line += ", " + str(i[j])
-        print(line + "]")
+    @staticmethod
+    def write(data, fileName):
+        CreateOutput.truncate_file(fileName)
+        f = open(fileName, "w")
+        f.write(data)
+        f.close()
     
 if __name__ == '__main__':
     fileName = "input.txt"
-    input = readFile(DIR_PATH + fileName)
-    n = int(input[0][0])
-    board = initBoard(n)
-    grid = functools.reduce(lambda res, cur: res + 
-    [[int(i) for i in cur.split(' ')]]
-    , input[1:], [])
-    
-    row_const = grid[0]
-    col_const = grid[1]
-    
-    kaku = Kakurasu(board, row_const, col_const, n)
-    a_star = AStarSearch()
-    start = time.time()
-    solution = a_star.solve(kaku)
-    end = time.time()
-    print("Kakurasu solve by A*:")
-    print("Time: ",end - start)
-    print("Solution: ")
-    printBoard(solution)
+    process = psutil.Process(os.getpid())
+    input = readFile(os.path.join(DIR_PATH, 'input' ,fileName))
+    n_tube = int(input[0][0])
+    n_tube_empty = int(input[0][1])
+    tube_size = int(input[0][2])
+    tube_full = []
+    for i in range(n_tube):
+        tube = Stack()
+        for j in range(tube_size):
+            tube.push(int(input[i + 1][j]))
+        tube_full += [tube]
 
+    watersort = WaterSort(n_tube, n_tube_empty, tube_size, tube_full)
+    
+    start= time.time()
+    watersort.solveByASTAR()
+    end = time.time()
+    print(process.memory_info().rss)
+    
+    steps = watersort.generate_steps()
+    print("WATERSORT solve by DFS:")
+    print("Time: ",end - start)
+    print("Steps:",len(steps))
+    print("Solution:")
+    print(steps[len(steps) - 1])
+    
+    CreateOutput.write(print_steps(steps), os.path.join(DIR_PATH, 'output' ,"output.txt"))
