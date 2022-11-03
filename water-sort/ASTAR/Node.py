@@ -10,7 +10,9 @@ class Node:
         self.g_value = g_value + 1
         self.h_value = 0
         self.total_cost = 0
-        # self.prev_nodes = []
+        self.prev_nodes = []
+        if(len(prev_nodes)==0):
+            self.prev_nodes += [self]
         if len(self.path) > 0:
             idx_tube_A = self.path[len(self.path) - 1][0]
             idx_tube_B = self.path[len(self.path) - 1][1]

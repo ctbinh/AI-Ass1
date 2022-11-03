@@ -30,7 +30,7 @@ class CreateOutput:
         f.close()
     
 if __name__ == '__main__':
-    fileName = "input.txt"
+    fileName = "input-00.txt"
     process = psutil.Process(os.getpid())
     input = readFile(os.path.join(DIR_PATH, 'input' ,fileName))
     n_tube = int(input[0][0])
