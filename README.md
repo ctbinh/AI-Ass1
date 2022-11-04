@@ -1,11 +1,8 @@
-# AI-Ass1
-## Run command
-### cd water-sort
-- Output text:
-### python main.py DFS
-or
-### python main.py A*
-- Output gif:
-### python main.py DFS gif
-or
-### python main.py A* gif
+# How to run
+- cd water-sort
+## Output text:
+- python main.py DFS
+- python main.py A*
+## Output gif:
+- python main.py DFS gif
+- python main.py A* gif
