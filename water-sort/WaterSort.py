@@ -6,11 +6,9 @@ import imageio
 import os
 
 class WaterSort:
-    UNSET = 0
-    DOT = 1
 
     def __init__(self, n_tube, n_tube_empty, tube_size, tube_full):
-        self.state = create_list_stack(n_tube, n_tube_empty, tube_full)
+        self.state = create_list_stack(n_tube_empty, tube_full)
         self.n_tube = n_tube
         self.n_tube_empty = n_tube_empty
         self.tube_size = tube_size
@@ -28,7 +26,7 @@ class WaterSort:
         self.solution = self.solver.solve(self)
         return self.solution
     
-    def generate_steps(self, index):
+    def generate_steps_gif(self, index):
         dir = './images'
         for f in os.listdir(dir):
             os.remove(os.path.join(dir, f))
@@ -36,6 +34,15 @@ class WaterSort:
             createImg(self.solution.prev_nodes[i].state, self.tube_size, i, len(self.solution.prev_nodes))
         step = self.generate_gif(index)
         return step
+    
+    def generate_steps(self):
+        res = []
+        for i in range(len(self.solution.prev_nodes)):
+            step = ''
+            for j in range(self.n_tube + self.n_tube_empty):
+                step += str(self.solution.prev_nodes[i].state[j]) + "\n"
+            res += [step]
+        return res
 
     def generate_gif(self, index):
         filenames = next(os.walk('./images'), (None, None, []))[2]

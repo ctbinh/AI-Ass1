@@ -30,7 +30,7 @@ class CreateOutput:
         f.write(data)
         f.close()
     
-def runtest(fileName, index, type):
+def runtest(fileName, index, type, is_gen_gif):
     process = psutil.Process(os.getpid())
     input = readFile(os.path.join(DIR_PATH, 'input' ,fileName))
     n_tube = int(input[0][0])
@@ -59,21 +59,31 @@ def runtest(fileName, index, type):
     if(not solution):
         result = "Cannot solve!!!"
         return result
-    steps = watersort.generate_steps(index)
+    steps = 0
+    if(is_gen_gif):
+        steps = watersort.generate_steps_gif(index)
+        result = 'gif'
+    else:
+        steps = watersort.generate_steps()
 
-    result += "WATERSORT solve by DFS:\n"
-    result += "Time: " + str(end - start) + '\n'
-    result += "Steps:" + str(steps) + '\n'
+        result += "WATERSORT solve by DFS:\n"
+        result += "Time: " + str(end - start) + '\n'
+        result += "Steps: " + str(len(steps)) + '\n'
+        result += "Solution: \n" + str(print_steps(steps)) + '\n'
     return result
 
 def main(argv):
     filenames = next(os.walk('./input'), (None, None, []))[2]
     for i in range(len(filenames)):
-        result = runtest(filenames[i], i, argv[0])
+        is_gen_gif = False
+        if(len(argv)==2 and argv[1] == 'gif'):
+            is_gen_gif = True
+        result = runtest(filenames[i], i, argv[0], is_gen_gif)
         if(not result):
             print("DFS or A*")
             return
-        file = open("./output/output-" + str(i) + ".txt", 'w+')
-        CreateOutput.write(result, os.path.join(DIR_PATH, 'output' ,"output-" + str(i) + ".txt"))
+        if(result != 'gif'):
+            open("./output/output-" + str(i) + ".txt", 'w+')
+            CreateOutput.write(result, os.path.join(DIR_PATH, 'output' ,"output-" + str(i) + ".txt"))
 if __name__ == '__main__':
     main(sys.argv[1:])

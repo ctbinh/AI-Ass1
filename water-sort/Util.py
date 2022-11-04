@@ -1,16 +1,8 @@
-def create_matrix(value, size):
-    res = []
-    for i in range(size):
-        res += [[value] * size]
-    return res
-
-def create_list_stack(n_tube, n_tube_empty, tube_full):
+def create_list_stack(n_tube_empty, tube_full):
     res = []
     res += tube_full
-    for i in range(n_tube_empty):
-        res += [Stack()]
+    res += [Stack()]*n_tube_empty
     return res
-
 
 def deep_copy(l):
     new_list = []
@@ -20,21 +12,6 @@ def deep_copy(l):
             new_tube.push(tube.items[i])
         new_list += [new_tube]
     return new_list
-
-
-def str_matrix(l, sep):
-    res = ""
-    for row in l:
-        
-        res += str(row) + sep  
-    return res
-
-def print_steps(l):
-    size = len(l)
-    res = ""
-    for i in range(size):
-        res += "Step " + str(i) + ":\n" + l[i] + "\n"
-    return res
 
 def print_steps(l):
     size = len(l)
@@ -83,24 +60,6 @@ class Stack(CustomList):
                 towers += 1
         return towers
     
-
-
-class Queue(CustomList):
-    def front(self):
-        return self.items[0]
-    
-    def empty(self):
-        return self.length == 0
-    
-    def push(self, item):
-        self.items += [item]
-        self.length += 1
-        
-    def pop(self):
-        front = self.front()
-        self.items = self.items[1:]
-        self.length -= 1
-        return front
 
 class PriorityQueue(CustomList):
     def __init__(self, comparator):

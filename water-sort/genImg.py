@@ -32,7 +32,6 @@ def createImg(step, tube_size, step_idx, total_img):
     img[:] = (173, 173, 173)
     for color in range(tube_size):
         for tube_idx in range(len(step)):
-            # select random window colours
             if(color >= len(step[tube_idx].items)):
                 window_colour = COLORS[0]
             else:
