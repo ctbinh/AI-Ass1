@@ -1,0 +1,4 @@
+Memory: 31571968
+WATERSORT solve by DFS:
+Time: 0.0009996891021728516
+Steps:9

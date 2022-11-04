@@ -22,7 +22,6 @@ class Node:
 
     def is_valid_cell(self, idx_tube_A, idx_tube_B):
         list_color_tube_A = self.state[idx_tube_A].items
-        list_color_tube_B = self.state[idx_tube_B].items
         top_color_A = self.state[idx_tube_A].top() if (not self.state[idx_tube_A].empty()) else -1
         if(self.state[idx_tube_B].length == self.tube_size):
             return False
@@ -32,9 +31,6 @@ class Node:
             return False
         elif(list_color_tube_A.count(top_color_A) == len(list_color_tube_A) and self.state[idx_tube_B].empty()):
             return False
-        # elif(not self.state[idx_tube_B].empty() and self.state[idx_tube_A].top() == self.state[idx_tube_B].top()):
-        #     if()
-        #     return False
         return True
 
     def is_goal_state(self):

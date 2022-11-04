@@ -4,6 +4,7 @@ import pathlib
 from WaterSort import *
 import time
 import psutil
+import sys
 
 DIR_PATH = str(pathlib.Path(__file__).parent.resolve())
 
@@ -29,7 +30,7 @@ class CreateOutput:
         f.write(data)
         f.close()
     
-def runtest(fileName, index):
+def runtest(fileName, index, type):
     process = psutil.Process(os.getpid())
     input = readFile(os.path.join(DIR_PATH, 'input' ,fileName))
     n_tube = int(input[0][0])
@@ -45,18 +46,34 @@ def runtest(fileName, index):
     watersort = WaterSort(n_tube, n_tube_empty, tube_size, tube_full)
     
     start= time.time()
-    watersort.solveByASTAR()
+    solution = None
+    if(type == 'DFS'):
+        solution = watersort.solveByDFS()
+    elif(type == "A*"):
+        solution = watersort.solveByASTAR()
+    else:
+        return None
     end = time.time()
-    print(process.memory_info().rss)
-    
+    result = ''
+    result += "Memory: " + str(process.memory_info().rss) + '\n'
+    if(not solution):
+        result = "Cannot solve!!!"
+        return result
     steps = watersort.generate_steps(index)
-    print("WATERSORT solve by DFS:")
-    print("Time: ", end - start)
-    print("Steps:", steps)
 
-if __name__ == '__main__':
+    result += "WATERSORT solve by DFS:\n"
+    result += "Time: " + str(end - start) + '\n'
+    result += "Steps:" + str(steps) + '\n'
+    return result
+
+def main(argv):
     filenames = next(os.walk('./input'), (None, None, []))[2]
     for i in range(len(filenames)):
-        runtest(filenames[i], i)
-    
-    # CreateOutput.write(print_steps(steps), os.path.join(DIR_PATH, 'output' ,"output.txt"))
+        result = runtest(filenames[i], i, argv[0])
+        if(not result):
+            print("DFS or A*")
+            return
+        file = open("./output/output-" + str(i) + ".txt", 'w+')
+        CreateOutput.write(result, os.path.join(DIR_PATH, 'output' ,"output-" + str(i) + ".txt"))
+if __name__ == '__main__':
+    main(sys.argv[1:])

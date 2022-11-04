@@ -1,0 +1,3 @@
+WATERSORT solve by DFS:
+Time: 2.373992443084717
+Steps:39

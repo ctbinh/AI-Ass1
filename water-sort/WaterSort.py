@@ -1,10 +1,9 @@
 from Util import *
 from AStarSearch import *
+from DFS import *
 from genImg import createImg
 import imageio
-import glob
 import os
-import shutil
 
 class WaterSort:
     UNSET = 0
@@ -22,13 +21,19 @@ class WaterSort:
     def solveByASTAR(self):
         self.solver = AStarSearch()
         self.solution = self.solver.solve(self)
+        return self.solution
+    
+    def solveByDFS(self):
+        self.solver = DepthFirstSearch()
+        self.solution = self.solver.solve(self)
+        return self.solution
     
     def generate_steps(self, index):
         dir = './images'
         for f in os.listdir(dir):
             os.remove(os.path.join(dir, f))
         for i in range(len(self.solution.prev_nodes)):
-            createImg(self.solution.prev_nodes[i].state, self.tube_size, i)
+            createImg(self.solution.prev_nodes[i].state, self.tube_size, i, len(self.solution.prev_nodes))
         step = self.generate_gif(index)
         return step
 
@@ -37,5 +42,5 @@ class WaterSort:
         images = []
         for filename in filenames:
             images.append(imageio.imread("./images/" + filename))
-        imageio.mimsave('./output/output-' + str(index) + '.gif', images, fps = 1)
+        imageio.mimsave('./output-gif/output-' + str(index) + '.gif', images, fps = 2)
         return len(filenames)
