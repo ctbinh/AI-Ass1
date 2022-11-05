@@ -1,7 +1,7 @@
-Memory: 31477760
-WATERSORT solve by DFS:
-Time: 0.0009992122650146484
-Steps: 13
+Memory: 31707136
+WATERSORT solve by A*: 
+Time: 0.003547191619873047
+Steps: 9
 Solution: 
 Step 0:
 Tube| 1 2 1 2 
@@ -10,75 +10,51 @@ Tube|
 Tube| 
 
 Step 1:
-Tube| 1 2 1 2 
-Tube| 2 1 2 
+Tube| 1 2 1 
+Tube| 2 1 2 1 
+Tube| 2 
 Tube| 
-Tube| 1 
 
 Step 2:
-Tube| 1 2 1 2 
-Tube| 2 1 
+Tube| 1 2 1 1 
+Tube| 2 1 2 
 Tube| 2 
-Tube| 1 
+Tube| 
 
 Step 3:
-Tube| 1 2 1 2 
-Tube| 2 1 1 
-Tube| 2 
+Tube| 1 2 1 1 
+Tube| 2 1 
+Tube| 2 2 
 Tube| 
 
 Step 4:
-Tube| 1 2 1 2 
+Tube| 1 2 1 1 
 Tube| 2 
-Tube| 2 
-Tube| 1 1 
+Tube| 2 2 
+Tube| 1 
 
 Step 5:
-Tube| 1 2 1 2 
-Tube| 2 2 
+Tube| 1 2 1 1 
 Tube| 
-Tube| 1 1 
+Tube| 2 2 2 
+Tube| 1 
 
 Step 6:
-Tube| 1 2 1 
-Tube| 2 2 
-Tube| 2 
-Tube| 1 1 
+Tube| 1 2 
+Tube| 
+Tube| 2 2 2 
+Tube| 1 1 1 
 
 Step 7:
-Tube| 1 2 1 
-Tube| 2 2 2 
+Tube| 1 
 Tube| 
-Tube| 1 1 
+Tube| 2 2 2 2 
+Tube| 1 1 1 
 
 Step 8:
-Tube| 1 2 1 1 
-Tube| 2 2 2 
 Tube| 
-Tube| 1 
-
-Step 9:
-Tube| 1 2 
-Tube| 2 2 2 
 Tube| 
-Tube| 1 1 1 
-
-Step 10:
-Tube| 1 
-Tube| 2 2 2 
-Tube| 2 
-Tube| 1 1 1 
-
-Step 11:
-Tube| 1 
 Tube| 2 2 2 2 
-Tube| 
-Tube| 1 1 1 
-
-Step 12:
 Tube| 1 1 1 1 
-Tube| 2 2 2 2 
-Tube| 
-Tube| 
 
 

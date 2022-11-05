@@ -19,6 +19,8 @@ class AStarSearch:
             top = open_queue.pop()
             watersort.steps += [top]
             closed += [top.generate_steps()]
+            # print("========================================")
+            # print(top.generate_steps())
             count += 1
             if top.is_goal_state():
                 solution = top

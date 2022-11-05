@@ -66,7 +66,7 @@ def runtest(fileName, index, type, is_gen_gif):
     else:
         steps = watersort.generate_steps()
 
-        result += "WATERSORT solve by DFS:\n"
+        result += "WATERSORT solve by " + type + ': \n'
         result += "Time: " + str(end - start) + '\n'
         result += "Steps: " + str(len(steps)) + '\n'
         result += "Solution: \n" + str(print_steps(steps)) + '\n'

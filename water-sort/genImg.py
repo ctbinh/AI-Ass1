@@ -17,11 +17,14 @@ COLOR6 = (157, 244, 24)
 COLOR7 = (0, 0, 0)
 NOCOLOR = (247, 247, 247)
 COLORS = [NOCOLOR, RED, GREEN, BLUE, YELLOW, PINK, BROWN, ORANGE,
+          COLOR1, COLOR2, COLOR3, COLOR4, COLOR5, COLOR6, COLOR7, RED, GREEN, BLUE, YELLOW, PINK, BROWN, ORANGE,
+          COLOR1, COLOR2, COLOR3, COLOR4, COLOR5, COLOR6, COLOR7, RED, GREEN, BLUE, YELLOW, PINK, BROWN, ORANGE,
           COLOR1, COLOR2, COLOR3, COLOR4, COLOR5, COLOR6, COLOR7]
 
 
 def getImgName():
     print('2'*5)
+
 
 def createImg(step, tube_size, step_idx, total_img):
     width, height = 1500, 500
@@ -38,8 +41,9 @@ def createImg(step, tube_size, step_idx, total_img):
                 window_colour = COLORS[step[tube_idx].items[color]]
             # draw windows
             img[
-                int(height*0.2 + 42*(tube_size - color) + 20):int(height*0.2 + 42*(tube_size - color) + 40 + 20),
+                int(height*0.01 + 42*(tube_size - color)):int(height*0.01 + 42*(tube_size - color) + 40),
                 int(width*0.01 + 65*tube_idx): int(width*0.01 + 65*tube_idx + 50)
             ] = window_colour
-    idx = str(step_idx) if len(str(step_idx)) == len(str(total_img)) else '0'*(len(str(total_img))-len(str(step_idx))) + str(step_idx)
+    idx = str(step_idx) if len(str(step_idx)) == len(str(total_img)
+                                                     ) else '0'*(len(str(total_img))-len(str(step_idx))) + str(step_idx)
     Image.fromarray(img).save("./images/" + idx + '.png')

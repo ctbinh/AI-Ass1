@@ -1,3 +1,1212 @@
-WATERSORT solve by DFS:
-Time: 1.9204645156860352
-Steps:39
+Memory: 151760896
+WATERSORT solve by A*: 
+Time: 14.428250312805176
+Steps: 67
+Solution: 
+Step 0:
+Tube| 10 1 7 10 7 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 8 10 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 2 
+Tube| 11 2 5 14 6 
+Tube| 4 14 3 6 5 
+Tube| 4 8 10 2 6 
+Tube| 4 9 7 9 2 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 14 
+Tube| 9 4 8 12 7 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 10 
+Tube| 
+Tube| 
+
+Step 1:
+Tube| 10 1 7 10 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 8 10 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 2 
+Tube| 11 2 5 14 6 
+Tube| 4 14 3 6 5 
+Tube| 4 8 10 2 6 
+Tube| 4 9 7 9 2 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 14 
+Tube| 9 4 8 12 7 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 10 
+Tube| 
+Tube| 7 
+
+Step 2:
+Tube| 10 1 7 10 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 8 10 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 2 
+Tube| 11 2 5 14 6 
+Tube| 4 14 3 6 5 
+Tube| 4 8 10 2 6 
+Tube| 4 9 7 9 2 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 14 
+Tube| 9 4 8 12 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 10 
+Tube| 
+Tube| 7 7 
+
+Step 3:
+Tube| 10 1 7 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 8 10 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 2 
+Tube| 11 2 5 14 6 
+Tube| 4 14 3 6 5 
+Tube| 4 8 10 2 6 
+Tube| 4 9 7 9 2 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 14 
+Tube| 9 4 8 12 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 10 
+Tube| 10 
+Tube| 7 7 
+
+Step 4:
+Tube| 10 1 7 7 7 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 8 10 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 2 
+Tube| 11 2 5 14 6 
+Tube| 4 14 3 6 5 
+Tube| 4 8 10 2 6 
+Tube| 4 9 7 9 2 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 14 
+Tube| 9 4 8 12 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 10 
+Tube| 10 
+Tube| 
+
+Step 5:
+Tube| 10 1 7 7 7 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 8 10 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 
+Tube| 11 2 5 14 6 
+Tube| 4 14 3 6 5 
+Tube| 4 8 10 2 6 
+Tube| 4 9 7 9 2 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 14 
+Tube| 9 4 8 12 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 10 
+Tube| 10 
+Tube| 2 
+
+Step 6:
+Tube| 10 1 7 7 7 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 8 10 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 
+Tube| 11 2 5 14 6 
+Tube| 4 14 3 6 5 
+Tube| 4 8 10 2 6 
+Tube| 4 9 7 9 2 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 14 
+Tube| 9 4 8 12 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 
+Tube| 10 10 
+Tube| 2 
+
+Step 7:
+Tube| 10 1 7 7 7 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 8 10 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 
+Tube| 11 2 5 14 6 
+Tube| 4 14 3 6 5 
+Tube| 4 8 10 2 6 
+Tube| 4 9 7 9 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 14 
+Tube| 9 4 8 12 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 
+Tube| 10 10 
+Tube| 2 2 
+
+Step 8:
+Tube| 10 1 7 7 7 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 8 10 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 14 6 
+Tube| 4 14 3 6 5 
+Tube| 4 8 10 2 6 
+Tube| 4 9 7 9 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 14 
+Tube| 9 4 8 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 
+Tube| 10 10 
+Tube| 2 2 
+
+Step 9:
+Tube| 10 1 7 7 7 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 8 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 14 6 
+Tube| 4 14 3 6 5 
+Tube| 4 8 10 2 6 
+Tube| 4 9 7 9 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 14 
+Tube| 9 4 8 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 
+Tube| 10 10 10 
+Tube| 2 2 
+
+Step 10:
+Tube| 10 1 7 7 7 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 14 6 
+Tube| 4 14 3 6 5 
+Tube| 4 8 10 2 6 
+Tube| 4 9 7 9 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 14 
+Tube| 9 4 8 8 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 
+Tube| 10 10 10 
+Tube| 2 2 
+
+Step 11:
+Tube| 10 1 7 7 7 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 6 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 14 6 
+Tube| 4 14 3 6 5 
+Tube| 4 8 10 2 
+Tube| 4 9 7 9 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 14 
+Tube| 9 4 8 8 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 
+Tube| 10 10 10 
+Tube| 2 2 
+
+Step 12:
+Tube| 10 1 7 7 7 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 6 6 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 14 
+Tube| 4 14 3 6 5 
+Tube| 4 8 10 2 
+Tube| 4 9 7 9 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 14 
+Tube| 9 4 8 8 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 
+Tube| 10 10 10 
+Tube| 2 2 
+
+Step 13:
+Tube| 10 1 7 7 7 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 6 6 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 14 
+Tube| 4 14 3 6 5 
+Tube| 4 8 10 
+Tube| 4 9 7 9 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 14 
+Tube| 9 4 8 8 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 
+Tube| 10 10 10 
+Tube| 2 2 2 
+
+Step 14:
+Tube| 10 1 7 7 7 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 6 6 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 14 
+Tube| 4 14 3 6 5 
+Tube| 4 8 
+Tube| 4 9 7 9 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 14 
+Tube| 9 4 8 8 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 
+Tube| 10 10 10 10 
+Tube| 2 2 2 
+
+Step 15:
+Tube| 10 1 7 7 7 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 6 6 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 14 
+Tube| 4 14 3 6 5 
+Tube| 4 
+Tube| 4 9 7 9 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 14 
+Tube| 9 4 8 8 8 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 
+Tube| 10 10 10 10 
+Tube| 2 2 2 
+
+Step 16:
+Tube| 10 1 7 7 7 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 6 6 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 14 14 
+Tube| 4 14 3 6 5 
+Tube| 4 
+Tube| 4 9 7 9 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 
+Tube| 10 10 10 10 
+Tube| 2 2 2 
+
+Step 17:
+Tube| 10 1 7 7 7 
+Tube| 12 5 9 12 11 
+Tube| 12 7 6 6 6 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 14 14 
+Tube| 4 14 3 6 5 
+Tube| 
+Tube| 4 9 7 9 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 
+Tube| 10 10 10 10 
+Tube| 2 2 2 
+
+Step 18:
+Tube| 10 1 7 7 7 
+Tube| 12 5 9 12 11 
+Tube| 12 7 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 14 14 
+Tube| 4 14 3 6 5 
+Tube| 6 6 6 
+Tube| 4 9 7 9 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 
+Tube| 10 10 10 10 
+Tube| 2 2 2 
+
+Step 19:
+Tube| 10 1 
+Tube| 12 5 9 12 11 
+Tube| 12 7 7 7 7 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 14 14 
+Tube| 4 14 3 6 5 
+Tube| 6 6 6 
+Tube| 4 9 7 9 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 3 9 1 
+Tube| 1 14 3 13 
+Tube| 10 10 10 10 
+Tube| 2 2 2 
+
+Step 20:
+Tube| 10 1 1 
+Tube| 12 5 9 12 11 
+Tube| 12 7 7 7 7 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 14 14 
+Tube| 4 14 3 6 5 
+Tube| 6 6 6 
+Tube| 4 9 7 9 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 3 9 
+Tube| 1 14 3 13 
+Tube| 10 10 10 10 
+Tube| 2 2 2 
+
+Step 21:
+Tube| 10 1 1 
+Tube| 12 5 9 12 11 
+Tube| 12 7 7 7 7 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 14 14 
+Tube| 4 14 3 6 5 
+Tube| 6 6 6 
+Tube| 4 9 7 9 9 
+Tube| 11 8 14 13 3 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 3 
+Tube| 1 14 3 13 
+Tube| 10 10 10 10 
+Tube| 2 2 2 
+
+Step 22:
+Tube| 10 1 1 
+Tube| 12 5 9 12 11 
+Tube| 12 7 7 7 7 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 14 14 
+Tube| 4 14 3 6 5 
+Tube| 6 6 6 
+Tube| 4 9 7 9 9 
+Tube| 11 8 14 13 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 3 3 
+Tube| 1 14 3 13 
+Tube| 10 10 10 10 
+Tube| 2 2 2 
+
+Step 23:
+Tube| 10 1 1 
+Tube| 12 5 9 12 11 
+Tube| 12 7 7 7 7 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 14 14 
+Tube| 4 14 3 6 5 
+Tube| 6 6 6 
+Tube| 4 9 7 9 9 
+Tube| 11 8 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 3 3 
+Tube| 1 14 3 13 13 
+Tube| 10 10 10 10 
+Tube| 2 2 2 
+
+Step 24:
+Tube| 10 1 1 
+Tube| 12 5 9 12 11 
+Tube| 12 7 7 7 7 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 
+Tube| 4 14 3 6 5 
+Tube| 6 6 6 
+Tube| 4 9 7 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 3 3 
+Tube| 1 14 3 13 13 
+Tube| 10 10 10 10 
+Tube| 2 2 2 
+
+Step 25:
+Tube| 10 1 1 
+Tube| 12 5 9 12 11 
+Tube| 12 7 7 7 7 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 5 
+Tube| 4 14 3 6 
+Tube| 6 6 6 
+Tube| 4 9 7 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 3 3 
+Tube| 1 14 3 13 13 
+Tube| 10 10 10 10 
+Tube| 2 2 2 
+
+Step 26:
+Tube| 10 1 1 
+Tube| 12 5 9 12 11 
+Tube| 12 7 7 7 7 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 5 
+Tube| 4 14 3 
+Tube| 6 6 6 6 
+Tube| 4 9 7 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 3 3 
+Tube| 1 14 3 13 13 
+Tube| 10 10 10 10 
+Tube| 2 2 2 
+
+Step 27:
+Tube| 10 1 1 
+Tube| 12 5 9 12 11 
+Tube| 12 7 7 7 7 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 5 5 
+Tube| 4 14 3 3 3 
+Tube| 6 6 6 6 
+Tube| 4 9 7 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 
+Tube| 1 14 3 13 13 
+Tube| 10 10 10 10 
+Tube| 2 2 2 
+
+Step 28:
+Tube| 10 1 1 
+Tube| 12 5 9 12 11 
+Tube| 12 7 7 7 7 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 
+Tube| 4 14 3 3 3 
+Tube| 6 6 6 6 
+Tube| 4 9 7 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 10 10 10 10 
+Tube| 2 2 2 
+
+Step 29:
+Tube| 10 1 1 
+Tube| 12 5 9 12 11 
+Tube| 12 7 7 7 7 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 2 2 2 
+Tube| 4 14 3 3 3 
+Tube| 6 6 6 6 
+Tube| 4 9 7 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 10 10 10 10 
+Tube| 
+
+Step 30:
+Tube| 10 1 1 
+Tube| 12 5 9 12 11 
+Tube| 12 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 12 12 
+Tube| 11 2 2 2 2 
+Tube| 4 14 3 3 3 
+Tube| 6 6 6 6 
+Tube| 4 9 7 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 10 10 10 10 
+Tube| 7 7 7 7 
+
+Step 31:
+Tube| 10 1 1 
+Tube| 12 5 9 12 11 
+Tube| 12 12 12 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 
+Tube| 11 2 2 2 2 
+Tube| 4 14 3 3 3 
+Tube| 6 6 6 6 
+Tube| 4 9 7 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 10 10 10 10 
+Tube| 7 7 7 7 
+
+Step 32:
+Tube| 10 1 1 
+Tube| 12 5 9 12 
+Tube| 12 12 12 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 11 
+Tube| 11 2 2 2 2 
+Tube| 4 14 3 3 3 
+Tube| 6 6 6 6 
+Tube| 4 9 7 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 10 10 10 10 
+Tube| 7 7 7 7 
+
+Step 33:
+Tube| 10 1 1 
+Tube| 12 5 9 
+Tube| 12 12 12 12 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 11 
+Tube| 11 2 2 2 2 
+Tube| 4 14 3 3 3 
+Tube| 6 6 6 6 
+Tube| 4 9 7 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 10 10 10 10 
+Tube| 7 7 7 7 
+
+Step 34:
+Tube| 10 1 1 
+Tube| 12 5 9 9 9 
+Tube| 12 12 12 12 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 11 
+Tube| 11 2 2 2 2 
+Tube| 4 14 3 3 3 
+Tube| 6 6 6 6 
+Tube| 4 9 7 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 10 10 10 10 
+Tube| 7 7 7 7 
+
+Step 35:
+Tube| 10 1 1 
+Tube| 12 5 9 9 9 
+Tube| 12 12 12 12 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 11 
+Tube| 11 2 2 2 2 
+Tube| 4 14 3 3 3 
+Tube| 6 6 6 6 
+Tube| 4 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 10 10 10 10 
+Tube| 7 7 7 7 7 
+
+Step 36:
+Tube| 10 1 1 
+Tube| 12 5 
+Tube| 12 12 12 12 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 11 
+Tube| 11 2 2 2 2 
+Tube| 4 14 3 3 3 
+Tube| 6 6 6 6 
+Tube| 4 9 9 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 10 10 10 10 
+Tube| 7 7 7 7 7 
+
+Step 37:
+Tube| 10 1 1 
+Tube| 12 
+Tube| 12 12 12 12 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 11 
+Tube| 11 2 2 2 2 
+Tube| 4 14 3 3 3 
+Tube| 6 6 6 6 
+Tube| 4 9 9 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 10 10 10 10 
+Tube| 7 7 7 7 7 
+
+Step 38:
+Tube| 10 1 1 
+Tube| 12 12 12 12 12 
+Tube| 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 11 
+Tube| 11 2 2 2 2 
+Tube| 4 14 3 3 3 
+Tube| 6 6 6 6 
+Tube| 4 9 9 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 10 10 10 10 
+Tube| 7 7 7 7 7 
+
+Step 39:
+Tube| 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 11 
+Tube| 11 2 2 2 2 
+Tube| 4 14 3 3 3 
+Tube| 6 6 6 6 
+Tube| 4 9 9 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 10 10 10 10 
+Tube| 7 7 7 7 7 
+
+Step 40:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 11 
+Tube| 11 2 2 2 2 
+Tube| 4 14 3 3 3 
+Tube| 6 6 6 6 
+Tube| 4 9 9 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 
+Tube| 7 7 7 7 7 
+
+Step 41:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 11 
+Tube| 11 
+Tube| 4 14 3 3 3 
+Tube| 6 6 6 6 
+Tube| 4 9 9 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 42:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 11 11 
+Tube| 
+Tube| 4 14 3 3 3 
+Tube| 6 6 6 6 
+Tube| 4 9 9 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 43:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 11 11 
+Tube| 3 3 3 
+Tube| 4 14 
+Tube| 6 6 6 6 
+Tube| 4 9 9 9 9 
+Tube| 11 8 14 14 14 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 44:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 11 11 
+Tube| 3 3 3 
+Tube| 4 14 14 14 14 
+Tube| 6 6 6 6 
+Tube| 4 9 9 9 9 
+Tube| 11 8 
+Tube| 2 13 3 4 4 
+Tube| 9 4 8 8 8 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 45:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 11 11 
+Tube| 3 3 3 
+Tube| 4 14 14 14 14 
+Tube| 6 6 6 6 
+Tube| 4 9 9 9 9 
+Tube| 11 8 8 8 8 
+Tube| 2 13 3 4 4 
+Tube| 9 4 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 46:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 11 11 
+Tube| 3 3 3 
+Tube| 4 14 14 14 14 
+Tube| 6 6 6 6 
+Tube| 4 9 9 9 9 
+Tube| 11 8 8 8 8 
+Tube| 2 13 3 
+Tube| 9 4 4 4 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 47:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 
+Tube| 1 11 8 13 1 
+Tube| 6 13 11 11 11 
+Tube| 3 3 3 3 
+Tube| 4 14 14 14 14 
+Tube| 6 6 6 6 
+Tube| 4 9 9 9 9 
+Tube| 11 8 8 8 8 
+Tube| 2 13 
+Tube| 9 4 4 4 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 48:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 1 
+Tube| 1 11 8 13 
+Tube| 6 13 11 11 11 
+Tube| 3 3 3 3 
+Tube| 4 14 14 14 14 
+Tube| 6 6 6 6 
+Tube| 4 9 9 9 9 
+Tube| 11 8 8 8 8 
+Tube| 2 13 
+Tube| 9 4 4 4 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 49:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 1 
+Tube| 1 11 8 13 13 
+Tube| 6 13 11 11 11 
+Tube| 3 3 3 3 
+Tube| 4 14 14 14 14 
+Tube| 6 6 6 6 
+Tube| 4 9 9 9 9 
+Tube| 11 8 8 8 8 
+Tube| 2 
+Tube| 9 4 4 4 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 50:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 1 
+Tube| 1 11 8 13 13 
+Tube| 6 13 11 11 11 
+Tube| 3 3 3 3 
+Tube| 4 14 14 14 14 
+Tube| 6 6 6 6 
+Tube| 4 9 9 9 9 
+Tube| 11 8 8 8 8 
+Tube| 
+Tube| 9 4 4 4 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 51:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 1 
+Tube| 1 11 8 13 13 
+Tube| 6 13 11 11 11 
+Tube| 3 3 3 3 
+Tube| 4 
+Tube| 6 6 6 6 
+Tube| 4 9 9 9 9 
+Tube| 11 8 8 8 8 
+Tube| 14 14 14 14 
+Tube| 9 4 4 4 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 52:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 1 
+Tube| 1 11 8 13 13 
+Tube| 6 13 11 11 11 
+Tube| 3 3 3 3 
+Tube| 4 4 4 4 
+Tube| 6 6 6 6 
+Tube| 4 9 9 9 9 
+Tube| 11 8 8 8 8 
+Tube| 14 14 14 14 
+Tube| 9 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 53:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 1 
+Tube| 1 11 8 13 13 
+Tube| 6 13 11 11 11 
+Tube| 3 3 3 3 
+Tube| 4 4 4 4 
+Tube| 6 6 6 6 
+Tube| 4 
+Tube| 11 8 8 8 8 
+Tube| 14 14 14 14 
+Tube| 9 9 9 9 9 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 54:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 1 
+Tube| 1 11 8 13 13 
+Tube| 6 13 11 11 11 
+Tube| 3 3 3 3 
+Tube| 
+Tube| 6 6 6 6 
+Tube| 4 4 4 4 4 
+Tube| 11 8 8 8 8 
+Tube| 14 14 14 14 
+Tube| 9 9 9 9 9 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 55:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 1 
+Tube| 1 11 8 13 13 
+Tube| 6 13 11 11 11 
+Tube| 3 3 3 3 
+Tube| 8 8 8 8 
+Tube| 6 6 6 6 
+Tube| 4 4 4 4 4 
+Tube| 11 
+Tube| 14 14 14 14 
+Tube| 9 9 9 9 9 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 56:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 1 
+Tube| 1 11 8 13 13 
+Tube| 6 13 
+Tube| 3 3 3 3 
+Tube| 8 8 8 8 
+Tube| 6 6 6 6 
+Tube| 4 4 4 4 4 
+Tube| 11 11 11 11 
+Tube| 14 14 14 14 
+Tube| 9 9 9 9 9 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 57:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 1 
+Tube| 1 11 8 
+Tube| 6 13 13 13 
+Tube| 3 3 3 3 
+Tube| 8 8 8 8 
+Tube| 6 6 6 6 
+Tube| 4 4 4 4 4 
+Tube| 11 11 11 11 
+Tube| 14 14 14 14 
+Tube| 9 9 9 9 9 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 58:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 1 
+Tube| 1 11 
+Tube| 6 13 13 13 
+Tube| 3 3 3 3 
+Tube| 8 8 8 8 8 
+Tube| 6 6 6 6 
+Tube| 4 4 4 4 4 
+Tube| 11 11 11 11 
+Tube| 14 14 14 14 
+Tube| 9 9 9 9 9 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 59:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 1 1 1 
+Tube| 1 
+Tube| 6 13 13 13 
+Tube| 3 3 3 3 
+Tube| 8 8 8 8 8 
+Tube| 6 6 6 6 
+Tube| 4 4 4 4 4 
+Tube| 11 11 11 11 11 
+Tube| 14 14 14 14 
+Tube| 9 9 9 9 9 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 60:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 
+Tube| 1 1 1 1 
+Tube| 6 13 13 13 
+Tube| 3 3 3 3 
+Tube| 8 8 8 8 8 
+Tube| 6 6 6 6 
+Tube| 4 4 4 4 4 
+Tube| 11 11 11 11 11 
+Tube| 14 14 14 14 
+Tube| 9 9 9 9 9 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 61:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 13 13 13 
+Tube| 1 1 1 1 
+Tube| 6 
+Tube| 3 3 3 3 
+Tube| 8 8 8 8 8 
+Tube| 6 6 6 6 
+Tube| 4 4 4 4 4 
+Tube| 11 11 11 11 11 
+Tube| 14 14 14 14 
+Tube| 9 9 9 9 9 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 13 13 
+Tube| 2 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 62:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 13 13 13 13 13 
+Tube| 1 1 1 1 
+Tube| 6 
+Tube| 3 3 3 3 
+Tube| 8 8 8 8 8 
+Tube| 6 6 6 6 
+Tube| 4 4 4 4 4 
+Tube| 11 11 11 11 11 
+Tube| 14 14 14 14 
+Tube| 9 9 9 9 9 
+Tube| 5 5 5 5 5 
+Tube| 1 14 3 
+Tube| 2 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 63:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 13 13 13 13 13 
+Tube| 1 1 1 1 
+Tube| 6 
+Tube| 3 3 3 3 3 
+Tube| 8 8 8 8 8 
+Tube| 6 6 6 6 
+Tube| 4 4 4 4 4 
+Tube| 11 11 11 11 11 
+Tube| 14 14 14 14 
+Tube| 9 9 9 9 9 
+Tube| 5 5 5 5 5 
+Tube| 1 14 
+Tube| 2 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 64:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 13 13 13 13 13 
+Tube| 1 1 1 1 
+Tube| 6 
+Tube| 3 3 3 3 3 
+Tube| 8 8 8 8 8 
+Tube| 6 6 6 6 
+Tube| 4 4 4 4 4 
+Tube| 11 11 11 11 11 
+Tube| 14 14 14 14 14 
+Tube| 9 9 9 9 9 
+Tube| 5 5 5 5 5 
+Tube| 1 
+Tube| 2 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 65:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 13 13 13 13 13 
+Tube| 
+Tube| 6 
+Tube| 3 3 3 3 3 
+Tube| 8 8 8 8 8 
+Tube| 6 6 6 6 
+Tube| 4 4 4 4 4 
+Tube| 11 11 11 11 11 
+Tube| 14 14 14 14 14 
+Tube| 9 9 9 9 9 
+Tube| 5 5 5 5 5 
+Tube| 1 1 1 1 1 
+Tube| 2 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+Step 66:
+Tube| 10 10 10 10 10 
+Tube| 12 12 12 12 12 
+Tube| 13 13 13 13 13 
+Tube| 
+Tube| 
+Tube| 3 3 3 3 3 
+Tube| 8 8 8 8 8 
+Tube| 6 6 6 6 6 
+Tube| 4 4 4 4 4 
+Tube| 11 11 11 11 11 
+Tube| 14 14 14 14 14 
+Tube| 9 9 9 9 9 
+Tube| 5 5 5 5 5 
+Tube| 1 1 1 1 1 
+Tube| 2 2 2 2 2 
+Tube| 7 7 7 7 7 
+
+
