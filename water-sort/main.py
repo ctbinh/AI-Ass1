@@ -5,6 +5,7 @@ from WaterSort import *
 import time
 import psutil
 import sys
+import func_timeout
 
 DIR_PATH = str(pathlib.Path(__file__).parent.resolve())
 
@@ -30,7 +31,14 @@ class CreateOutput:
         f.write(data)
         f.close()
     
-def runtest(fileName, index, type, is_gen_gif):
+def runFunction(f, max_wait, default_value):
+    try:
+        return func_timeout.func_timeout(max_wait, f)
+    except func_timeout.FunctionTimedOut:
+        pass
+    return default_value
+
+def runtest(fileName, index, type, is_gen_gif, is_gen_both):
     process = psutil.Process(os.getpid())
     input = readFile(os.path.join(DIR_PATH, 'input' ,fileName))
     n_tube = int(input[0][0])
@@ -48,9 +56,9 @@ def runtest(fileName, index, type, is_gen_gif):
     start= time.time()
     solution = None
     if(type == 'DFS'):
-        solution = watersort.solveByDFS()
+        solution = runFunction(watersort.solveByDFS, 30, "Timeout 30s!!!")
     elif(type == "A*"):
-        solution = watersort.solveByASTAR()
+        solution = runFunction(watersort.solveByASTAR, 30, "Timeout 30s!!!")
     else:
         return None
     end = time.time()
@@ -59,10 +67,20 @@ def runtest(fileName, index, type, is_gen_gif):
     if(not solution):
         result = "Cannot solve!!!"
         return result
+    if(isinstance(solution, str)):
+        return 'Timeout 30s!!!'
     steps = 0
     if(is_gen_gif):
         steps = watersort.generate_steps_gif(index)
         result = 'gif'
+    elif(is_gen_both):
+        steps = watersort.generate_steps_gif(index)
+        steps = watersort.generate_steps()
+
+        result += "WATERSORT solve by " + type + ': \n'
+        result += "Time: " + str(end - start) + '\n'
+        result += "Steps: " + str(len(steps)) + '\n'
+        result += "Solution: \n" + str(print_steps(steps)) + '\n'
     else:
         steps = watersort.generate_steps()
 
@@ -73,14 +91,24 @@ def runtest(fileName, index, type, is_gen_gif):
     return result
 
 def main(argv):
+    if(len(argv)==0):
+        print("Chỉ xuất output dạng .txt:\n\tpython main.py DFS\n\tor\n\tpython main.py A*\n")
+        print("Chỉ xuất output dạng .gif:\n\tpython main.py DFS gif\n\tor\n\tpython main.py A* gif\n")
+        print("Xuất cả 2 dạng .txt và .gif:\n\tpython main.py DFS both\n\tor\n\tpython main.py A* both\n")
+        return
     filenames = next(os.walk('./input'), (None, None, []))[2]
     for i in range(len(filenames)):
         is_gen_gif = False
+        is_gen_both = False
         if(len(argv)==2 and argv[1] == 'gif'):
             is_gen_gif = True
-        result = runtest(filenames[i], i, argv[0], is_gen_gif)
+        elif(len(argv)==2 and argv[1] == 'both'):
+            is_gen_both = True
+        result = runtest(filenames[i], i, argv[0], is_gen_gif, is_gen_both)
         if(not result):
-            print("DFS or A*")
+            print("Chỉ xuất output dạng .txt:\n\tpython main.py DFS\n\tor\n\tpython main.py A*\n")
+            print("Chỉ xuất output dạng .gif:\n\tpython main.py DFS gif\n\tor\n\tpython main.py A* gif\n")
+            print("Xuất cả 2 dạng .txt và .gif:\n\tpython main.py DFS both\n\tor\n\tpython main.py A* both\n")
             return
         if(result != 'gif'):
             open("./output/output-" + str(i) + ".txt", 'w+')

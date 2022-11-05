@@ -21,13 +21,8 @@ COLORS = [NOCOLOR, RED, GREEN, BLUE, YELLOW, PINK, BROWN, ORANGE,
           COLOR1, COLOR2, COLOR3, COLOR4, COLOR5, COLOR6, COLOR7, RED, GREEN, BLUE, YELLOW, PINK, BROWN, ORANGE,
           COLOR1, COLOR2, COLOR3, COLOR4, COLOR5, COLOR6, COLOR7]
 
-
-def getImgName():
-    print('2'*5)
-
-
 def createImg(step, tube_size, step_idx, total_img):
-    width, height = 1500, 500
+    width, height = 1600, 700
     # create blank image
     img = np.zeros((height, width, 3), dtype=np.uint8)
 
